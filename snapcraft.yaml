@@ -1,4 +1,4 @@
-name: secure-coldchain-gps-app-sysgain
+name: secure-coldchain-gps-app-sysgain-auto
 version: '1.5.0'
 summary: Node JS code for the Gateway
 description: Example of snapped Node.js application for communications with BLE beacons
