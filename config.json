@@ -1,0 +1,8 @@
+{
+  "azureFunction": {
+    "connStringPrefix": "HostName=CCTitanIOTHub.azure-devices.net;DeviceId=",
+    "connectionString": "https://ccfunction1.azurewebsites.net/api/DeviceOnboard/?deviceid=",
+    "gateway_beacon_data": "https://ccfunction1.azurewebsites.net/api/gateway_beacon_data/?deviceid=",
+    "gpsAzureFunctionUrl": "https://ccfunction1.azurewebsites.net/api/Get_GPS_Data/?deviceid=352093085666104"
+  }
+}

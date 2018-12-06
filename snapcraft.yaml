@@ -1,0 +1,34 @@
+name: secure-coldchain-gps-app-sysgain
+version: '1.5.0'
+summary: Node JS code for the Gateway
+description: Example of snapped Node.js application for communications with BLE beacons
+confinement: strict
+grade: devel
+
+parts:
+  gateway-backend-app:
+    plugin: nodejs
+    source: .
+    build-packages:
+      - libudev-dev
+      - libbluetooth-dev
+      - python
+      - g++
+      - make
+      - bluez
+
+apps:
+  gateway-backend-app:
+    command: bin/gateway-backend-app
+    daemon: simple
+    restart-condition: always
+    plugs:
+      - serial-port-067b2303
+      - bluetooth-control
+      - network-bind
+      - network
+      - network-control
+
+plugs:
+ serial-port-067b2303:
+  interface: serial-port

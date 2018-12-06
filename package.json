@@ -1,0 +1,51 @@
+{
+  "name": "gateway-backend-app",
+  "version": "1.2.0",
+  "description": "This modules contains the Node.js code for the gateway to scan the list of beacons and GPS and send data to Azure IoT Hub.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "lint": "./node_modules/.bin/eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "engines": {
+    "node": ">=6.11.4"
+  },
+  "files": [
+    "index.js",
+    "config.json",
+    "transaction.js",
+    "service.js",
+    "util.js"
+  ],
+  "bin": "index.js",
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "rigado",
+    "oemblue",
+    "noble",
+    "bluetooth",
+    "mqtt"
+  ],
+  "author": "Suman Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "azure-iot-device-mqtt": "^1.7.3",
+    "bluetooth-hci-socket": "^0.5.1",
+    "connectivity": "1.0.1",
+    "macaddress": "^0.2.9",
+    "nmea": "^0.1.0",
+    "noble": "^1.9.1",
+    "npm": "^6.4.1",
+    "request": "^2.88.0",
+    "serialport": "^7.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.10.0"
+  }
+}
